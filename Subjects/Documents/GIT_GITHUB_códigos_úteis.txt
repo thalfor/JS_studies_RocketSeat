@@ -1,0 +1,51 @@
+https://readme.so/editor
+
+- gera chave
+ssh-keygen -t ed25519 -C "thales.fornazari@gmail.com"
+- copia chave
+cat ~/.ssh/id_ed25519.pub | clip
+- link
+ssh -T git@github.com
+
+git init
+git config --global user.name "thalfor"
+git config --global user.email "thales.fornazari@gmail.com"
+git config --list
+git add .
+git add index.html
+git commit -m "created index.html"
+git log
+git log --oneline
+git log -n 3
+git status
+git diff
+git restore .
+git restore index.html
+git restore --staged .
+git restore --staged index.html
+git commit --amend -m "changed title index.html"
+git reset --soft HEAD~1
+
+- verifica se o código já está versionado no github
+git remote --v
+
+git branch -M main
+git remote add origin git@github.com:thalfor/RocketSeatProjeto14_GIT_GITHUB.git
+git push -u origin main
+git push
+
+.gitignore é um arquivo onde você pode por nome de arquivos e pastas que não quer entrar no push
+
+- reseta o cash para caso tenha dado um push de algo que não quer mais estar lá
+git rm -r --cached .
+
+- criar pasta vazia e manter no github
+- criar arquivo .gitkeep para manter
+.gitkeep
+
+- clona o github para outra máquina para continuar trabalhando
+git clone git@github.com:thalfor/RocketSeatProjeto14_GIT_GITHUB.git
+
+- atualiza o seu código na máquina com alguma modificação que outra pessoa fez
+git pull
+

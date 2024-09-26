@@ -1,0 +1,64 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/* para rodar no terminal node e o nome do código, por ex, node Aula001.js */
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*Variáveis*/
+
+// var
+// let
+// const
+/*
+var clima = "quente";
+clima = "frio";
+console.log(clima);
+let clima = "quente";
+clima = "frio";
+console.log(clima);
+const clima = "quente";
+console.log(clima);
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Dinâmicos */
+/*
+let clima; // não precisa definir, ao atribuir valor ele já se define
+clima = "Thalfor";
+console.log(typeof clima);
+let clima = 10; // é dinâmico
+clima = "Thalfor";
+console.log(typeof clima);
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Scope e var */
+//Scope determina a visibilidade de alguma varável
+//var é global e pode funcionar fora de um escopo
+/*
+  var x = 0;
+{
+  console.log(x);
+}
+{
+  var x = 1;
+  console.log(x);
+}
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* Scope Let e const */
+// let e const são locais e não globais
+/*
+{
+  let x = 1;
+  console.log(x);
+}
+let y = 1;
+{
+  y = 0; // não definiu dentro a apenas atualizou o valor
+}
+console.log(y);
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////

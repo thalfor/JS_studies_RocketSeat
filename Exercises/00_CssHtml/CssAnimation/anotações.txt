@@ -1,0 +1,116 @@
+#########################################################################################################################
+## CSS Animation 01
+
+01 - faça o quadrado ir de um lado para o outro na página. Fazer ficar parado no ponto oposto ao início.
+/* 01 */
+
+.square {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  /*from*/
+  0% {
+  }
+  /*to*/
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+#########################################################################################################################
+## CSS Animation 02
+
+02 - Reverter animação. Fazer o quadrado ir e voltar ao ponto inicial.
+/* 02 */
+
+.square {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes move {
+  0% {
+  }
+  /* ou 50% mas daí sem o direction e sem interarion-count */
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+#########################################################################################################################
+## CSS Animation 03
+
+03 - faça a animação esperar 2 segundos para iniciar.
+/* 03 */
+
+.square {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  0% {
+  }
+  /* ou 50% */
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+#########################################################################################################################
+## CSS Animation 04
+
+04 - quando passar o mouse em cima do quadrado, faça a animação parar. Faça o quadrado piscar sem parar.
+.square {
+  /*
+  animation-name: move, blink;
+  animation-duration: 1s, 200ms;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-timing-function: linear;
+*/
+  animation: move 1s forwards alternate infinite linear, blink 100ms infinite;
+}
+
+.square:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  0% {
+  }
+  /* ou 50% */
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+npm install express
+caso apague a paste node_modules basta:
+npm install
+
+node src/server.js
+ctrl + C para o server
+
+get - leitura
+post - criação
+put - atualização
+delete - deleção
+patch - atualização parcial
+
+--save-dev é uma dependência apenas para usar em desenvolvimento, atualiza o server a cada modificação.
+npm install nodemon --save-dev
+
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+
+npm run dev
+
+- Controller deve ter no máximo 5 métodos, caso precise mais vale criar um novo controller
+class UsersController {
+  /*
+  - index = GET para listar vários registros.
+  - show - GET para exibir um registro específico.
+  - create - POST para criar um registro.
+  - update - PUT para atualizar um registro.
+  - delete - DELETE para remover um registro.
+  */
+}
+
+npm install jsonwebtoken
+npm install multer
